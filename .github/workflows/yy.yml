@@ -3,7 +3,7 @@ on:
     branches: main
 
 jobs:
-  import-data:
+  yy:
     runs-on: ubuntu-latest
     steps:
       - name: Set up R
@@ -29,3 +29,4 @@ jobs:
           git add output.csv
           git commit -m 'Data updated' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
+          
