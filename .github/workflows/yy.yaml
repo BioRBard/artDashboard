@@ -1,8 +1,9 @@
+# Event - What starts this workflow?
 on:
-  push:
-    branches: main
-
-name: hello-r-world1
+  workflow_dispatch:
+  
+# Name of the workflow
+name: hello-r-world-push
 
 jobs:
   yy:
