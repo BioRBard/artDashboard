@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
 # Name of the workflow
-name: hello-r-world-push
+name: write-csv
 
 jobs:
   yy:

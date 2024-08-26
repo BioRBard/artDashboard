@@ -16,7 +16,7 @@ jobs:
         run:  echo "it worked!"
       
       - name: Run bash script
-        run: bash ./shell_script.sh
+        run: bash shell_script.sh
 
        # Install R
       - uses: r-lib/actions/setup-r@v2    
