@@ -12,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - name: print-message-in-Bash
-        run:  echo "it worked!"
-        run:  pwd
+        run:  echo "it worked!";pwd
         
        # Install R
       - uses: r-lib/actions/setup-r@v2    
