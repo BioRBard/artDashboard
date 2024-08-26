@@ -11,8 +11,13 @@ jobs:
     # Use Ubuntu   
     runs-on: ubuntu-latest 
     steps:
-      - run:  echo "it worked!"
-      - run:  sh shell_script.sh
+      
+      - name: echo command
+        run:  echo "it worked!"
+      
+      - name: Run bash script
+        run: bash ./shell_script.sh
+
        # Install R
       - uses: r-lib/actions/setup-r@v2    
       - name: print-message   
