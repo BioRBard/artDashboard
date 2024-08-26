@@ -11,23 +11,27 @@ jobs:
     # Use Ubuntu   
     runs-on: ubuntu-latest 
     steps:
-      - name: echo command
+      - name: print-message-in-Bash
         run:  echo "it worked!"
+        run:  pwd
         
        # Install R
       - uses: r-lib/actions/setup-r@v2    
-      - name: print-message   
-        # Code to execute R script
+      - name: print-message-in-R   
+        # Code to execute in R 
         run: Rscript -e 'print("Hello R World!")' 
         
-        
+       # Checkout repository so we can access the files we want to run
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+    
+        # Run a bash script in the home directory 
       - name: Run bash script
         run: bash shell_script.sh
-        
-      - name: Import data
+  
+        # Run an R script in the code folder 
+      - name: Run R script
         run: Rscript -e 'source("code/r_script.R")'
 
 
